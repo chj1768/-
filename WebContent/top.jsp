@@ -15,13 +15,13 @@ Connection myConn = null;
 ResultSet myResultSet = null;
 Statement stmt = null;
 String mySQL = "";
-String user1 = "db01";
-String dburl = "jdbc:oracle:thin:@localhost:1521:orcl";
-String passwd = "ss2";
+String dburl = "jdbc:oracle:thin:@주소:orcl";
+String user = "아이디";
+String passwd = "비밀번호";
 String dbdriver = "oracle.jdbc.driver.OracleDriver";
 try {
 Class.forName(dbdriver);
-myConn = DriverManager.getConnection (dburl, user1, passwd);
+myConn = DriverManager.getConnection (dburl, user, passwd);
 stmt = myConn.createStatement();
 } catch(SQLException ex) { System.err.println("SQLException: " + ex.getMessage());
 }
